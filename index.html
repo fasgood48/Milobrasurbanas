@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mil Obras Urbanas S.R.L.</title>
+<meta name="description" content="Mil Obras Urbanas S.R.L. - Empresa de construcción especializada en obras civiles y remodelaciones." />
+<style>
+:root{
+  --orange:#ff6a00;--black:#0b0b0b;--radius:8px;--gap:1.25rem;--max-width:1100px;
+  --ff:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+}
+body{margin:0;font-family:var(--ff);color:#111;background:#fff;line-height:1.5;}
+header{background:var(--black);color:white;padding:.75rem 0;position:sticky;top:0;z-index:10;}
+.container{max-width:var(--max-width);margin:auto;padding:0 1rem;}
+.nav{display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:.6rem;}
+.brand img{height:48px;}
+nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0;}
+nav a{color:white;text-decoration:none;font-weight:600;}
+nav a:hover{color:var(--orange);}
+.hero{background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.4)),url('img/logo.webp') center/contain no-repeat;
+color:white;padding:4rem 1rem;text-align:center;}
+.hero h1{font-size:2.2rem;margin-bottom:.5rem;}
+.btn{background:var(--orange);color:var(--black);padding:.7rem 1.1rem;border-radius:8px;text-decoration:none;font-weight:700;}
+section{padding:2rem 1rem;max-width:var(--max-width);margin:auto;}
+.card{background:#fff;border-radius:var(--radius);padding:1rem;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
+footer{background:#0b0b0b;color:#ddd;padding:1rem;text-align:center;}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+   <div class="brand"><img src="img/logo.webp" alt="Logo Mil Obras Urbanas"><span><strong>Mil Obras Urbanas S.R.L.</strong></span></div>
+   <nav><ul><li><a href="#inicio">Inicio</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
+ </div>
+</header>
+
+<section id="inicio" class="hero">
+  <h1>Construimos con calidad y compromiso</h1>
+  <p>Mil Obras Urbanas S.R.L. es una empresa de construcción especializada en obras civiles y remodelaciones. Nos destacamos por la calidad, el compromiso y la eficiencia en cada proyecto.</p>
+  <a href="#contacto" class="btn">Solicitar presupuesto</a>
+</section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <div class="card"><p><strong>Obras civiles</strong>: Construcción integral de edificios, viviendas y locales comerciales.</p></div><br>
+  <div class="card"><p><strong>Remodelaciones</strong>: Renovaciones de espacios residenciales y comerciales.</p></div><br>
+  <div class="card"><p><strong>Obras públicas</strong>: Participación en proyectos de infraestructura y servicios urbanos.</p></div>
+</section>
+
+<section id="sobre-nosotros">
+  <h2>Sobre nosotros</h2>
+  <div class="card"><p>Mil Obras Urbanas S.R.L. es una empresa argentina comprometida con la excelencia y la innovación en la construcción. Nuestro equipo combina experiencia técnica, materiales de primera calidad y una sólida gestión de proyectos.</p></div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="card">
+    <p><strong>Teléfono:</strong> +54 9 11 1234 5678<br>
+    <strong>Email:</strong> contacto@milobrasurbanas.com<br>
+    <strong>Dirección:</strong> Calle Falsa 123, Ciudad</p>
+  </div>
+</section>
+
+<footer>© 2025 Mil Obras Urbanas S.R.L. — Todos los derechos reservados</footer>
+</body>
+</html>
