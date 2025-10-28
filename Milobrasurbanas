@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIL OBRAS URBANAS - Soluciones Integrales en Construcción</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+    }
+
+    /* Header y Navegación */
+    header {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ff6b35;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: 500;
+    }
+
+    nav a:hover {
+        color: #ff6b35;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><path fill="%23444" d="M0 300L100 250L200 300L300 200L400 300L500 250L600 300L700 200L800 300L900 250L1000 300L1100 200L1200 300V600H0Z"/></svg>');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: #ff6b35;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: all 0.3s;
+        animation: fadeInUp 1s ease 0.4s both;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+    }
+
+    .cta-button:hover {
+        background: #e55a2b;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255,107,53,0.3);
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Secciones */
+    section {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        color: #1a1a1a;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: #ff6b35;
+        margin: 1rem auto;
+    }
+
+    /* Productos */
+    .productos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .producto-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .producto-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .producto-card-header {
+        background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .producto-card-body {
+        padding: 2rem;
+    }
+
+    .producto-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .producto-card ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .producto-card li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .producto-card li:last-child {
+        border-bottom: none;
+    }
+
+    /* Servicios */
+    .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+
+    .servicio-card {
+        background: #f9f9f9;
+        padding: 2.5rem;
+        border-radius: 10px;
+        border-left: 5px solid #ff6b35;
+        transition: all 0.3s;
+    }
+
+    .servicio-card:hover {
+        background: white;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transform: translateX(10px);
+    }
+
+    .servicio-card h3 {
+        color: #ff6b35;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    /* Sobre Nosotros */
+    #nosotros {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: white;
+    }
+
+    #nosotros h2::after {
+        background: #ff6b35;
+    }
+
+    .nosotros-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    /* Contacto */
+    .contacto-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .contacto-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 1rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #ff6b35;
+    }
+
+    .form-group textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .contacto-info {
+        background: #f9f9f9;
+        padding: 3rem;
+        border-radius: 10px;
+    }
+
+    .contacto-info h3 {
+        color: #ff6b35;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .info-item {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        background: #ff6b35;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+        background: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    footer p {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        nav ul {
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+        }
+
+        .contacto-container {
+            grid-template-columns: 1fr;
+        }
+
+        .servicios-grid {
+            grid-template-columns: 1fr;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    /* Animación scroll */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">MIL OBRAS URBANAS</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+```
+<!-- Hero Section -->
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h1>MIL OBRAS URBANAS</h1>
+        <p>Soluciones Integrales en Construcción y Servicios</p>
+        <p style="font-size: 1.3rem; font-style: italic;">"Construimos el futuro"</p>
+        <a href="#contacto" class="cta-button">Solicitar Cotización</a>
+    </div>
+</section>
+
+<!-- Productos -->
+<section id="productos">
+    <h2>Productos Destacados</h2>
+    <div class="productos-grid">
+        <div class="producto-card fade-in">
+            <div class="producto-card-header">
+                <h3>Submuración Armada</h3>
+            </div>
+            <div class="producto-card-body">
+                <ul>
+                    <li>✓ Mallas de refuerzo</li>
+                    <li>✓ Sistemas de contención</li>
+                    <li>✓ Consultar disponibilidad</li>
+                    <li>✓ Asesoría técnica incluida</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="producto-card fade-in">
+            <div class="producto-card-header">
+                <h3>Barras de Acero ADN-420</h3>
+            </div>
+            <div class="producto-card-body">
+                <ul>
+                    <li>✓ Diámetros: 6-8-10-12 mm</li>
+                    <li>✓ Diámetros: 16-20-25-32 mm</li>
+                    <li>✓ Cortado industrializado</li>
+                    <li>✓ Doblado de precisión</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="producto-card fade-in">
+            <div class="producto-card-header">
+                <h3>Estructuras Prefabricadas</h3>
+            </div>
+            <div class="producto-card-body">
+                <ul>
+                    <li>✓ Columnas armadas</li>
+                    <li>✓ Vigas estructurales</li>
+                    <li>✓ Cabezales industrializados</li>
+                    <li>✓ Entrega en obra</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-grid">
+        <div class="servicio-card fade-in">
+            <h3>Estructuras Armadas</h3>
+            <p>Ofrecemos soluciones integrales para el desarrollo de proyectos de construcción, asegurando eficacia y cumplimiento de los más altos estándares de calidad en cada etapa del proceso. Planificación y entrega del material elaborado según necesidades de obra.</p>
+        </div>
+
+        <div class="servicio-card fade-in">
+            <h3>Ingeniería y Desarrollo de Proyectos</h3>
+            <p>Propuestas equivalentes de armadura. Estudio para mejorar la optimización de la materia prima. Servicio de asistencia técnica a lo largo de la obra. Control y revisión de planos de ejecución de armaduras. Solución de armado con armaduras industriales. Detalles constructivos. Planos definitivos (as built).</p>
+        </div>
+
+        <div class="servicio-card fade-in">
+            <h3>Asesoría para Estudios y Constructores</h3>
+            <p>En fases previas a la ejecución de los proyectos podemos aportar nuestros conocimientos y experiencia para plantear sugerencias o soluciones específicas de armado teniendo en cuenta el interés que el cliente pueda tener en cada caso. Elaboración de planillas. Planos de elaboración y montaje de armaduras por fases (shop drawings).</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sobre Nosotros -->
+<section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <div class="nosotros-content fade-in">
+        <p>Mil Obras Urbanas somos líderes en el sector de la construcción y servicios, ofreciendo soluciones innovadoras con un compromiso inquebrantable hacia la calidad y la excelencia.</p>
+        <p>Nuestro equipo de expertos altamente calificados se dedica a satisfacer las necesidades de nuestros clientes, garantizando resultados superiores en cada proyecto.</p>
+        <p style="margin-top: 2rem; font-weight: bold; font-size: 1.3rem;">Servicios integrados de acero elaborado y encofrado</p>
+    </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto">
+    <h2>Contáctanos</h2>
+    <div class="contacto-container">
+        <form class="contacto-form fade-in" onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Enviar Mensaje</button>
+        </form>
+
+        <div class="contacto-info fade-in">
+            <h3>Información de Contacto</h3>
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                    <strong>Dirección:</strong><br>
+                    Consultar ubicación
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">📞</div>
+                <div>
+                    <strong>Teléfono:</strong><br>
+                    Contactar para información
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">✉️</div>
+                <div>
+                    <strong>Email:</strong><br>
+                    info@milobrasurbanas.com
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">🕐</div>
+                <div>
+                    <strong>Horario:</strong><br>
+                    Lunes a Viernes: 8:00 - 18:00<br>
+                    Sábados: 8:00 - 13:00
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 MIL OBRAS URBANAS. Todos los derechos reservados.</p>
+    <p>Soluciones Integrales en Construcción y Servicios</p>
+</footer>
+
+<script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Animación al hacer scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Handle form
+    function handleSubmit(e) {
+        e.preventDefault();
+        alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+        e.target.reset();
+        return false;
+    }
+</script>
+```
+
+</body>
+</html>
